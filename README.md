@@ -3,7 +3,7 @@ It is an extension for Albert launcher that you can find here:
 ```
 https://github.com/albertlauncher/albert 
 ```
-You can quickly check spelling of any word in any language you want.
+You can with it quickly check spelling of any word in any language you want.
 
 ## Installation
 Put extension file into right location and make it executable
