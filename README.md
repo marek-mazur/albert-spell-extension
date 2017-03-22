@@ -2,9 +2,10 @@
 
 
 ## Installation
-Put extension file into right location
+Put extension file into right location and make it executable
 ```
 ~/.local/share/albert/external/org.albert.extension.external.spell.py
+chmod +x ~/.local/share/albert/external/org.albert.extension.external.spell.py
 ```
 Be sure that you have installed needed packages.
 ```bash
