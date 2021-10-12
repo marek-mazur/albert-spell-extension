@@ -4,18 +4,15 @@
 Check spelling of any word in any language you want. Example: spell en great
 """
 
-from albertv0 import Item
-from albertv0 import ClipAction
+from albert import *
 import os
 import re
 import subprocess
 
-__iid__ = "PythonInterface/v0.1"
-__prettyname__ = "Spell checker"
-__version__ = "2.0"
-__trigger__ = "spell "
-__author__ = "Marek Mazur"
-__dependencies__ = []
+__title__ = "Spell checker"
+__version__ = "0.4.1"
+__triggers__ = "spell "
+__authors__ = "Marek Mazur"
 
 
 dict_file = '~/.local/share/albert/org.albert.extension.python/modules/Spell/dictionaries/{language}.dict'
@@ -88,7 +85,7 @@ def prepare_results_item(query, result):
     :return Item
     """
     value = result.decode('utf-8').split(' ')[0]
-    item = Item(id=__prettyname__, icon=icon_path, completion=query.rawString)
+    item = Item(id=__title__, icon=icon_path, completion=query.rawString)
     item.text = value
     item.subtext = result
     item.addAction(ClipAction("Copy result to clipboard", value))
@@ -103,8 +100,8 @@ def prepare_error_message(message):
 
     :return str
     """
-    item = Item(id=__prettyname__, icon=icon_path)
-    item.text = __prettyname__
+    item = Item(id=__title__, icon=icon_path)
+    item.text = __title__
     item.subtext = message
     return item
 
